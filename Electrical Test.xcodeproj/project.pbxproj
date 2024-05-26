@@ -10,13 +10,13 @@
 		93275B1B2C0340D600A3383B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B1A2C0340D600A3383B /* AppDelegate.swift */; };
 		93275B1D2C0340D600A3383B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B1C2C0340D600A3383B /* SceneDelegate.swift */; };
 		93275B1F2C0340D600A3383B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B1E2C0340D600A3383B /* ViewController.swift */; };
-		93275B222C0340D600A3383B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93275B212C0340D600A3383B /* Base */; };
 		93275B252C0340D600A3383B /* Electrical_Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93275B232C0340D600A3383B /* Electrical_Test.xcdatamodeld */; };
 		93275B272C0340DA00A3383B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93275B262C0340DA00A3383B /* Assets.xcassets */; };
 		93275B2A2C0340DA00A3383B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93275B292C0340DA00A3383B /* Base */; };
 		93275B352C0340DB00A3383B /* Electrical_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B342C0340DB00A3383B /* Electrical_TestTests.swift */; };
 		93275B3F2C0340DB00A3383B /* Electrical_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B3E2C0340DB00A3383B /* Electrical_TestUITests.swift */; };
 		93275B412C0340DB00A3383B /* Electrical_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B402C0340DB00A3383B /* Electrical_TestUITestsLaunchTests.swift */; };
+		93275B4F2C0346FD00A3383B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93275B4E2C0346FD00A3383B /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		93275B1A2C0340D600A3383B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93275B1C2C0340D600A3383B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		93275B1E2C0340D600A3383B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93275B212C0340D600A3383B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93275B242C0340D600A3383B /* Electrical_Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Electrical_Test.xcdatamodel; sourceTree = "<group>"; };
 		93275B262C0340DA00A3383B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93275B292C0340DA00A3383B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93275B4F2C0346FD00A3383B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,6 @@
 				93275B1A2C0340D600A3383B /* AppDelegate.swift */,
 				93275B1C2C0340D600A3383B /* SceneDelegate.swift */,
 				93275B1E2C0340D600A3383B /* ViewController.swift */,
-				93275B202C0340D600A3383B /* Main.storyboard */,
 				93275B262C0340DA00A3383B /* Assets.xcassets */,
 				93275B282C0340DA00A3383B /* LaunchScreen.storyboard */,
 				93275B2B2C0340DA00A3383B /* Info.plist */,
@@ -146,6 +145,9 @@
 			dependencies = (
 			);
 			name = "Electrical Test";
+			packageProductDependencies = (
+				93275B4E2C0346FD00A3383B /* SnapKit */,
+			);
 			productName = "Electrical Test";
 			productReference = 93275B172C0340D600A3383B /* Electrical Test.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 93275B0E2C0340D600A3383B;
+			packageReferences = (
+				93275B4D2C0346FC00A3383B /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 93275B182C0340D600A3383B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,7 +241,6 @@
 			files = (
 				93275B272C0340DA00A3383B /* Assets.xcassets in Resources */,
 				93275B2A2C0340DA00A3383B /* Base in Resources */,
-				93275B222C0340D600A3383B /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		93275B202C0340D600A3383B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93275B212C0340D600A3383B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93275B282C0340DA00A3383B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -451,7 +447,6 @@
 				INFOPLIST_FILE = "Electrical Test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -479,7 +474,6 @@
 				INFOPLIST_FILE = "Electrical Test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -611,6 +605,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93275B4D2C0346FC00A3383B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93275B4E2C0346FD00A3383B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93275B4D2C0346FC00A3383B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		93275B232C0340D600A3383B /* Electrical_Test.xcdatamodeld */ = {
