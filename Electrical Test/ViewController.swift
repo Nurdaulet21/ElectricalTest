@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.text = ""
         label.textColor = .black
+        label.numberOfLines = 0
+        label.font = .boldSystemFont(ofSize: 16)
         label.textAlignment = .center
         label.backgroundColor = UIColor.gray
         label.layer.cornerRadius = 10
@@ -23,6 +25,8 @@ class ViewController: UIViewController {
     private let firstButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemGray
+        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.font = .boldSystemFont(ofSize: 12)
         button.layer.cornerRadius = 10
         button.tag = 0
         return button
@@ -31,6 +35,8 @@ class ViewController: UIViewController {
     private let secondButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemGray
+        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.font = .boldSystemFont(ofSize: 12)
         button.layer.cornerRadius = 10
         button.tag = 1
         return button
@@ -39,6 +45,8 @@ class ViewController: UIViewController {
     private let thirdButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemGray
+        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.font = .boldSystemFont(ofSize: 12)
         button.layer.cornerRadius = 10
         button.tag = 2
         return button
@@ -47,6 +55,8 @@ class ViewController: UIViewController {
     private let fourthButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemGray
+        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.font = .boldSystemFont(ofSize: 12)
         button.layer.cornerRadius = 10
         button.tag = 3
         return button
@@ -135,6 +145,7 @@ class ViewController: UIViewController {
         }
 
         let currentQuestion = questions[currentQuestionIndex]
+        print("\(currentQuestion.question)")
         questionLabel.text = currentQuestion.question
         firstButton.setTitle(currentQuestion.options[0], for: .normal)
         secondButton.setTitle(currentQuestion.options[1], for: .normal)
