@@ -17,6 +17,8 @@
 		93275B3F2C0340DB00A3383B /* Electrical_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B3E2C0340DB00A3383B /* Electrical_TestUITests.swift */; };
 		93275B412C0340DB00A3383B /* Electrical_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B402C0340DB00A3383B /* Electrical_TestUITestsLaunchTests.swift */; };
 		93275B4F2C0346FD00A3383B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93275B4E2C0346FD00A3383B /* SnapKit */; };
+		93275B512C036B1F00A3383B /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B502C036B1F00A3383B /* QuestionModel.swift */; };
+		93275B532C036CB800A3383B /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 93275B522C036CB800A3383B /* questions.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		93275B3A2C0340DB00A3383B /* Electrical TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Electrical TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93275B3E2C0340DB00A3383B /* Electrical_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Electrical_TestUITests.swift; sourceTree = "<group>"; };
 		93275B402C0340DB00A3383B /* Electrical_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Electrical_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93275B502C036B1F00A3383B /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		93275B522C036CB800A3383B /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				93275B1A2C0340D600A3383B /* AppDelegate.swift */,
 				93275B1C2C0340D600A3383B /* SceneDelegate.swift */,
 				93275B1E2C0340D600A3383B /* ViewController.swift */,
+				93275B502C036B1F00A3383B /* QuestionModel.swift */,
+				93275B522C036CB800A3383B /* questions.json */,
 				93275B262C0340DA00A3383B /* Assets.xcassets */,
 				93275B282C0340DA00A3383B /* LaunchScreen.storyboard */,
 				93275B2B2C0340DA00A3383B /* Info.plist */,
@@ -248,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93275B532C036CB800A3383B /* questions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +276,7 @@
 				93275B1B2C0340D600A3383B /* AppDelegate.swift in Sources */,
 				93275B1D2C0340D600A3383B /* SceneDelegate.swift in Sources */,
 				93275B252C0340D600A3383B /* Electrical_Test.xcdatamodeld in Sources */,
+				93275B512C036B1F00A3383B /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
