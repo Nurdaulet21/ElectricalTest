@@ -8,8 +8,8 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
-    
+class TestViewController: UIViewController {
+
     private let questionLabel: UILabel = {
         let label = UILabel()
         label.text = ""
@@ -62,8 +62,20 @@ class ViewController: UIViewController {
         return button
     }()
 
-    private var questions: [Question] = []
-    private var currentQuestionIndex: Int = 0
+    private let fifthButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemGray
+        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.font = .boldSystemFont(ofSize: 12)
+        button.layer.cornerRadius = 10
+        button.tag = 4
+        return button
+    }()
+
+        private var questions: [Question] = []
+        private var currentQuestionIndex: Int = 0
+        private var shuffledOptions: [String] = []
+        private var correctAnswerIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +83,7 @@ class ViewController: UIViewController {
         setupConstraints()
         view.backgroundColor = .white
         loadQuestions()
+        questions.shuffle()
         showQuestion()
     }
 
@@ -81,25 +94,27 @@ class ViewController: UIViewController {
         view.addSubview(secondButton)
         view.addSubview(thirdButton)
         view.addSubview(fourthButton)
+        view.addSubview(fifthButton)
 
         firstButton.addTarget(self, action: #selector(optionSelected(_:)), for: .touchUpInside)
         secondButton.addTarget(self, action: #selector(optionSelected(_:)), for: .touchUpInside)
         thirdButton.addTarget(self, action: #selector(optionSelected(_:)), for: .touchUpInside)
         fourthButton.addTarget(self, action: #selector(optionSelected(_:)), for: .touchUpInside)
+        fifthButton.addTarget(self, action: #selector(optionSelected(_:)), for: .touchUpInside)
     }
 
     private func setupConstraints() {
         questionLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(20)
             make.top.equalToSuperview().offset(100)
-            make.bottom.equalTo(questionLabel.snp.top).offset(200)
+            make.bottom.equalTo(questionLabel.snp.top).offset(150)
             make.trailing.equalToSuperview().offset(-20)
             make.centerX.equalToSuperview()
         }
 
         firstButton.snp.makeConstraints { make in
             make.leading.equalTo(questionLabel.snp.leading)
-            make.top.equalTo(questionLabel.snp.bottom).offset(100)
+            make.top.equalTo(questionLabel.snp.bottom).offset(50)
             make.trailing.equalTo(questionLabel.snp.trailing)
             make.bottom.equalTo(firstButton.snp.top).offset(70)
         }
@@ -124,6 +139,13 @@ class ViewController: UIViewController {
             make.trailing.equalTo(questionLabel.snp.trailing)
             make.bottom.equalTo(fourthButton.snp.top).offset(70)
         }
+
+        fifthButton.snp.makeConstraints { make in
+            make.leading.equalTo(questionLabel.snp.leading)
+            make.top.equalTo(fourthButton.snp.bottom).offset(20)
+            make.trailing.equalTo(questionLabel.snp.trailing)
+            make.bottom.equalTo(fifthButton.snp.top).offset(70)
+        }
     }
 
     private func loadQuestions() {
@@ -147,10 +169,17 @@ class ViewController: UIViewController {
         let currentQuestion = questions[currentQuestionIndex]
         print("\(currentQuestion.question)")
         questionLabel.text = currentQuestion.question
-        firstButton.setTitle(currentQuestion.options[0], for: .normal)
-        secondButton.setTitle(currentQuestion.options[1], for: .normal)
-        thirdButton.setTitle(currentQuestion.options[2], for: .normal)
-        fourthButton.setTitle(currentQuestion.options[3], for: .normal)
+        shuffledOptions = currentQuestion.options
+        shuffledOptions.shuffle()
+
+        firstButton.setTitle(shuffledOptions[0], for: .normal)
+        secondButton.setTitle(shuffledOptions[1], for: .normal)
+        thirdButton.setTitle(shuffledOptions[2], for: .normal)
+        fourthButton.setTitle(shuffledOptions[3], for: .normal)
+        fifthButton.setTitle(shuffledOptions[4], for: .normal)
+
+        correctAnswerIndex = shuffledOptions.firstIndex(of: currentQuestion.options[currentQuestion.correctAnswer]) ?? 0
+
     }
 
     @objc private func optionSelected(_ sender: UIButton) {

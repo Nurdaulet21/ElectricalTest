@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		93275B1B2C0340D600A3383B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B1A2C0340D600A3383B /* AppDelegate.swift */; };
 		93275B1D2C0340D600A3383B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B1C2C0340D600A3383B /* SceneDelegate.swift */; };
-		93275B1F2C0340D600A3383B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B1E2C0340D600A3383B /* ViewController.swift */; };
+		93275B1F2C0340D600A3383B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B1E2C0340D600A3383B /* TestViewController.swift */; };
 		93275B252C0340D600A3383B /* Electrical_Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93275B232C0340D600A3383B /* Electrical_Test.xcdatamodeld */; };
 		93275B272C0340DA00A3383B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93275B262C0340DA00A3383B /* Assets.xcassets */; };
 		93275B2A2C0340DA00A3383B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93275B292C0340DA00A3383B /* Base */; };
@@ -19,6 +19,7 @@
 		93275B4F2C0346FD00A3383B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93275B4E2C0346FD00A3383B /* SnapKit */; };
 		93275B512C036B1F00A3383B /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B502C036B1F00A3383B /* QuestionModel.swift */; };
 		93275B572C048BDF00A3383B /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 93275B562C048BDF00A3383B /* questions.json */; };
+		93B64A8A2C05FB63001340BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B64A892C05FB63001340BA /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 		93275B172C0340D600A3383B /* Electrical Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electrical Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93275B1A2C0340D600A3383B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93275B1C2C0340D600A3383B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93275B1E2C0340D600A3383B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93275B1E2C0340D600A3383B /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		93275B242C0340D600A3383B /* Electrical_Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Electrical_Test.xcdatamodel; sourceTree = "<group>"; };
 		93275B262C0340DA00A3383B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93275B292C0340DA00A3383B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		93275B402C0340DB00A3383B /* Electrical_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Electrical_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		93275B502C036B1F00A3383B /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		93275B562C048BDF00A3383B /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		93B64A892C05FB63001340BA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,8 @@
 			children = (
 				93275B1A2C0340D600A3383B /* AppDelegate.swift */,
 				93275B1C2C0340D600A3383B /* SceneDelegate.swift */,
-				93275B1E2C0340D600A3383B /* ViewController.swift */,
+				93B64A892C05FB63001340BA /* MainViewController.swift */,
+				93275B1E2C0340D600A3383B /* TestViewController.swift */,
 				93275B502C036B1F00A3383B /* QuestionModel.swift */,
 				93275B562C048BDF00A3383B /* questions.json */,
 				93275B262C0340DA00A3383B /* Assets.xcassets */,
@@ -272,9 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93275B1F2C0340D600A3383B /* ViewController.swift in Sources */,
+				93275B1F2C0340D600A3383B /* TestViewController.swift in Sources */,
 				93275B1B2C0340D600A3383B /* AppDelegate.swift in Sources */,
 				93275B1D2C0340D600A3383B /* SceneDelegate.swift in Sources */,
+				93B64A8A2C05FB63001340BA /* MainViewController.swift in Sources */,
 				93275B252C0340D600A3383B /* Electrical_Test.xcdatamodeld in Sources */,
 				93275B512C036B1F00A3383B /* QuestionModel.swift in Sources */,
 			);
@@ -457,6 +461,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,6 +489,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
