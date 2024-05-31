@@ -20,6 +20,7 @@
 		93275B512C036B1F00A3383B /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93275B502C036B1F00A3383B /* QuestionModel.swift */; };
 		93275B572C048BDF00A3383B /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 93275B562C048BDF00A3383B /* questions.json */; };
 		93B64A8A2C05FB63001340BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B64A892C05FB63001340BA /* MainViewController.swift */; };
+		93B64A8C2C09E829001340BA /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B64A8B2C09E829001340BA /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		93275B502C036B1F00A3383B /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		93275B562C048BDF00A3383B /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		93B64A892C05FB63001340BA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		93B64A8B2C09E829001340BA /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				93275B1C2C0340D600A3383B /* SceneDelegate.swift */,
 				93B64A892C05FB63001340BA /* MainViewController.swift */,
 				93275B1E2C0340D600A3383B /* TestViewController.swift */,
+				93B64A8B2C09E829001340BA /* RulesViewController.swift */,
 				93275B502C036B1F00A3383B /* QuestionModel.swift */,
 				93275B562C048BDF00A3383B /* questions.json */,
 				93275B262C0340DA00A3383B /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B64A8C2C09E829001340BA /* RulesViewController.swift in Sources */,
 				93275B1F2C0340D600A3383B /* TestViewController.swift in Sources */,
 				93275B1B2C0340D600A3383B /* AppDelegate.swift in Sources */,
 				93275B1D2C0340D600A3383B /* SceneDelegate.swift in Sources */,

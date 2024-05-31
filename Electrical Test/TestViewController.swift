@@ -10,21 +10,37 @@ import SnapKit
 
 class TestViewController: UIViewController {
 
-    private let questionLabel: UILabel = {
+        // MARK: - UI
+    
+    private let numberOfQuestionLabel: UILabel = {
         let label = UILabel()
-        label.text = ""
-        label.textColor = .black
+        label.text = "1"
+        label.textColor = .white
         label.numberOfLines = 0
         label.font = .boldSystemFont(ofSize: 16)
         label.textAlignment = .center
-        label.backgroundColor = UIColor.gray
+        label.backgroundColor = UIColor.systemIndigo
+        label.layer.masksToBounds =  true
+        label.layer.cornerRadius = 5
+        return label
+    }()
+
+    private let questionLabel: UILabel = {
+        let label = UILabel()
+        label.text = ""
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.font = .boldSystemFont(ofSize: 16)
+        label.textAlignment = .center
+        label.backgroundColor = UIColor.systemCyan
+        label.layer.masksToBounds =  true
         label.layer.cornerRadius = 10
         return label
     }()
 
     private let firstButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .systemGray
+        button.backgroundColor = .systemIndigo
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.font = .boldSystemFont(ofSize: 12)
         button.layer.cornerRadius = 10
@@ -34,7 +50,7 @@ class TestViewController: UIViewController {
 
     private let secondButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .systemGray
+        button.backgroundColor = .systemIndigo
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.font = .boldSystemFont(ofSize: 12)
         button.layer.cornerRadius = 10
@@ -44,7 +60,7 @@ class TestViewController: UIViewController {
 
     private let thirdButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .systemGray
+        button.backgroundColor = .systemIndigo
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.font = .boldSystemFont(ofSize: 12)
         button.layer.cornerRadius = 10
@@ -54,7 +70,7 @@ class TestViewController: UIViewController {
 
     private let fourthButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .systemGray
+        button.backgroundColor = .systemIndigo
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.font = .boldSystemFont(ofSize: 12)
         button.layer.cornerRadius = 10
@@ -64,7 +80,7 @@ class TestViewController: UIViewController {
 
     private let fifthButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .systemGray
+        button.backgroundColor = .systemIndigo
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.font = .boldSystemFont(ofSize: 12)
         button.layer.cornerRadius = 10
@@ -77,6 +93,7 @@ class TestViewController: UIViewController {
         private var shuffledOptions: [String] = []
         private var correctAnswerIndex: Int = 0
 
+        // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -86,9 +103,10 @@ class TestViewController: UIViewController {
         questions.shuffle()
         showQuestion()
     }
-
+    // MARK: - Setup Hierarchies
     private func setupViews() {
-        view.backgroundColor = UIColor.systemGray
+        view.backgroundColor = UIColor.black
+        view.addSubview(numberOfQuestionLabel)
         view.addSubview(questionLabel)
         view.addSubview(firstButton)
         view.addSubview(secondButton)
@@ -104,9 +122,14 @@ class TestViewController: UIViewController {
     }
 
     private func setupConstraints() {
+        numberOfQuestionLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(50)
+            make.trailing.equalToSuperview().offset(-20)
+            make.width.height.equalTo(50)
+        }
         questionLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(100)
+            make.top.equalToSuperview().offset(150)
             make.bottom.equalTo(questionLabel.snp.top).offset(150)
             make.trailing.equalToSuperview().offset(-20)
             make.centerX.equalToSuperview()
@@ -148,6 +171,7 @@ class TestViewController: UIViewController {
         }
     }
 
+    // MARK: - Controller options
     private func loadQuestions() {
         if let url = Bundle.main.url(forResource: "questions", withExtension: "json") {
             do {
@@ -196,8 +220,8 @@ class TestViewController: UIViewController {
         } else {
             print("Неправильный ответ.")
         }
-
         currentQuestionIndex += 1
+        numberOfQuestionLabel.text = "\(1 + currentQuestionIndex)"
         showQuestion()
     }
 }
